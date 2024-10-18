@@ -1,0 +1,14 @@
+# 데이터셋 및 데이터로더 생성_ 수정 방향 제안/? 
+transform = transforms.Compose([
+        transforms.Resize((128, 128)),  # 이미지 resize 128x128
+        transforms.RandomHorizontalFlip(),  
+        transforms.RandomRotation(10),  
+        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1), 
+        
+    transforms.ToPILImage(),
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(10),
+    transforms.ToTensor(),
+])
+
+
